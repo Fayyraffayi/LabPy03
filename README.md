@@ -104,3 +104,96 @@ Flowchart algoritma:
    - Saya akan menjelaskan alur algoritma dari kode perhitungan laba tersebut:
 
 # LATIHAN 2
+
+![WhatsApp Image 2024-11-06 at 14 34 55 (1)](https://github.com/user-attachments/assets/58c0626a-705a-4a96-b22a-c8d62bedb063)
+
+# 1. Inisialisasi
+
+       laba_bulanan = []  # Array kosong untuk menyimpan laba per bulan
+       total_laba = 0     # Variabel untuk menyimpan total laba
+       modal_awal = 100000000  # Modal awal (tersirat dari output)
+
+# 2. Proses Perhitungan Laba (Loop pertama)
+
+    FOR bulan FROM 1 TO 8:
+    1. Set laba = 0
+    
+    2. Hitung laba berdasarkan bulan:
+       IF bulan <= 2:           # Bulan 1-2
+          laba = 0
+       ELSE IF bulan <= 4:      # Bulan 3-4
+          laba = modal_awal * 1% (0.01)
+       ELSE IF bulan <= 7:      # Bulan 5-7
+          laba = modal_awal * 5% (0.05)
+       ELSE:                    # Bulan 8
+          laba = modal_awal * 2% (0.02)
+    
+    3. Simpan laba ke array laba_bulanan
+    4. Tambahkan laba ke total_laba
+
+Flowchart algoritma:
+
+         Start
+          ↓
+      [Inisialisasi variabel]
+          ↓
+      ┌─────────────────────┐
+      │ For bulan 1 to 8   │
+      └─────────┬───────────┘
+                ↓
+         [Set laba = 0]
+                ↓
+         [Cek kondisi bulan]
+                ↓
+        ┌─────────────────┐
+        │ Bulan 1-2: 0%   │
+        │ Bulan 3-4: 1%   │
+        │ Bulan 5-7: 5%   │
+        │ Bulan 8: 2%     │
+        └────────┬────────┘
+                 ↓
+           [Hitung laba]
+                 ↓
+         [Simpan ke array]
+                 ↓
+        [Update total_laba]
+                 ↓
+       ┌─────────────────────┐
+        │ For each laba      │
+       └─────────┬───────────┘
+                 ↓
+      [Tampilkan laba per bulan]
+                 ↓
+     [Tampilkan total laba]
+                 ↓
+                end
+
+Output Program:
+
+       laba bulan ke- 1 sebesar: 0
+       laba bulan ke- 2 sebesar: 0
+       laba bulan ke- 3 sebesar: 1000000.0
+       laba bulan ke- 4 sebesar: 1000000.0
+       laba bulan ke- 5 sebesar: 5000000.0
+       laba bulan ke- 6 sebesar: 5000000.0
+       laba bulan ke- 7 sebesar: 5000000.0
+       laba bulan ke- 8 sebesar: 2000000.0
+       Total laba adalah: 19000000.0
+
+Penjelasan Logika Bisnis:
+
+       Bulan 1-2: Belum ada laba (0%)
+       Bulan 3-4: Laba 1% dari modal
+       Bulan 5-7: Laba meningkat jadi 5% dari modal
+       Bulan 8: Laba turun menjadi 2% dari modal
+
+Program ini mendemonstrasikan konsep:
+
+      Array dan operasi append
+      Perulangan (for loop)
+      Pengambilan keputusan berjenjang (if-elif-else)
+      Perhitungan persentase
+      Akumulasi nilai
+      Format string untuk output
+
+# LATIHAN 3
