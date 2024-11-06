@@ -197,3 +197,113 @@ Program ini mendemonstrasikan konsep:
       Format string untuk output
 
 # LATIHAN 3
+
+![WhatsApp Image 2024-11-06 at 14 34 55 (2)](https://github.com/user-attachments/assets/58274ebd-701a-4c5b-8f39-997fb28e60c0)
+
+# 1. Inisialisasi Program
+
+        def atm_simulator():
+             saldo = 1000000  # Saldo awal
+
+# 2. Alur Utama
+
+LOOP Program ATM:
+    1. Tampilkan menu:
+       - 1. Tarik Uang
+       - 2. Keluar
+    
+    2. Minta input pilihan menu (1/2)
+    
+    3. CASE Pilihan:
+       CASE "1" (Tarik Uang):
+          a. Minta input jumlah penarikan
+          b. Validasi penarikan:
+             IF jumlah > saldo:
+                Tampilkan "Maaf, saldo tidak mencukupi!"
+             ELSE IF jumlah <= 0:
+                Tampilkan "Jumlah penarikan tidak valid!"
+             ELSE:
+                Kurangi saldo dengan jumlah penarikan
+                Tampilkan "Penarikan berhasil!"
+       
+       CASE "2" (Keluar):
+          a. Tampilkan "Terima kasih telah menggunakan ATM!"
+          b. Keluar dari program (break)
+       
+       DEFAULT:
+          Tampilkan "Pilihan tidak valid!"
+
+Flowchart algoritma:
+
+                         Start
+                           ↓
+                  [Inisialisasi saldo]
+                           ↓
+                 ┌─────────────────────┐
+                 │ Loop ATM Program   │←─────────┐
+                 └─────────┬───────────┘         │
+                           ↓                     │
+                     [Tampilkan Menu]            │
+                           ↓                     │
+                     [Input Pilihan]             │
+                           ↓                     │
+                     [Cek Pilihan]               │
+                           ↓                     │
+                     ┌─────────────────┐         │
+                     │ Pilihan = 1     │──→[Input Jumlah]    
+                     │ Pilihan = 2     │──→[Tampil Terima Kasih]→[Exit]
+                     │ Pilihan Invalid │──→[Tampil Error]     │
+                     └────────┬────────┘         │
+                              ↓                  │
+                      [Validasi Jumlah]          │
+                           ↓                     │
+                      [Update Saldo]             │
+                           ↓                     │
+                      [Tampil Status]            │
+                           └─────────────────────┘
+
+Output Program yang terlihat:
+
+      Saldo saat ini: Rp 1000000
+      1. Tarik Uang
+      2. Keluar
+      Pilih menu (1/2): 1
+      Masukkan jumlah penarikan: 500000
+      Penarikan berhasil!
+
+      Saldo saat ini: Rp 500000
+      1. Tarik Uang
+      2. Keluar
+      Pilih menu (1/2): 2
+      Terima kasih telah menggunakan ATM!
+
+# Penjelasan Detail:
+#      1. Struktur Data
+
+              - Variabel saldo: menyimpan saldo rekening
+              - Variabel pilihan: menyimpan pilihan menu
+              - Variabel jumlah: menyimpan jumlah penarikan
+
+#      2. Validasi
+
+                - Validasi pilihan menu (harus 1 atau 2)
+                - Validasi jumlah penarikan:
+                   - Tidak boleh melebihi saldo
+                   - Tidak boleh negatif atau nol
+
+
+#       3. Fitur
+
+            - Cek saldo
+            - Penarikan uang
+            - Keluar dari program
+
+       Program ini mendemonstrasikan konsep:
+
+                     - Function definition
+                     - Loop control (break)
+                     - Conditional statements (if-elif-else)
+                     - Input/output handling
+                     - Basic error handling
+                     - Variable manipulation
+                     - Menu-driven interface
